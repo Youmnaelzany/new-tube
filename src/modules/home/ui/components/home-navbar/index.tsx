@@ -24,6 +24,7 @@ export const HomeNavbar = () => {
         <div className="mx-auto flex max-w-[720px] flex-1 justify-center">
           <SearchInput />
         </div>
+        {/* Signin Button */}
         <div className="flex flex-shrink-0 items-center gap-4">
           <AuthButton />
         </div>

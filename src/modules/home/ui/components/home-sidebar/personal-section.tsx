@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 
-import { FlameIcon, HomeIcon, PlaySquareIcon } from "lucide-react";
+import { HistoryIcon, ListVideoIcon, ThumbsUpIcon } from "lucide-react";
 
 import {
   SidebarGroup,
   SidebarGroupContent,
+  SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
@@ -14,26 +15,29 @@ import {
 
 const items = [
   {
-    title: "Home",
-    url: "/",
-    icon: HomeIcon,
-  },
-  {
-    title: "Subscriptions",
-    url: "/feed/subscriptions",
-    icon: PlaySquareIcon,
+    title: "History",
+    url: "/playlists/history",
+    icon: HistoryIcon,
     auth: true,
   },
   {
-    title: "Trending",
-    url: "/feed/trending",
-    icon: FlameIcon,
+    title: "Liked Videos",
+    url: "/playlists/liked",
+    icon: ThumbsUpIcon,
+    auth: true,
+  },
+  {
+    title: "All Playlist",
+    url: "/playlists",
+    icon: ListVideoIcon,
+    auth: true,
   },
 ];
 
-export const MainSection = () => {
+export const PersonalSection = () => {
   return (
     <SidebarGroup>
+      <SidebarGroupLabel>You</SidebarGroupLabel>
       <SidebarGroupContent>
         <SidebarMenu>
           {items.map((item) => (
